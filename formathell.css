@@ -1,0 +1,132 @@
+
+
+body { margin: 0px;
+       padding: 0px;
+       overflow: scroll;
+     }
+
+
+#header { width: 993px;
+          height: 209px;
+          background: url(images/header.jpg) no-repeat;
+          
+          margin: 0 auto;
+          }
+
+#navgr {
+       background: url(images/brick01.jpg) repeat;
+       background-attachment:fixed;
+      
+       margin: 0 auto;
+       }
+
+#nav {
+       background: url(images/brick21.jpg) repeat-x;
+       background-attachment:fixed;	  
+       }
+
+
+#mainbg {
+         background: url(images/brick18.jpg) repeat;
+         background-attachment:fixed;
+         height:1200px;
+         }
+#mainbggr {
+         background: url(images/brick18.jpg) repeat;
+         background-attachment:fixed;
+         height:1200px;
+         }
+
+#main {
+    width: 993px;
+    height: 477px;
+    margin: 0 auto;
+    background: url(images/main.jpg) no-repeat;
+}
+
+#maingr {
+    width: 993px;
+    height: 1000px;
+    margin: 0 auto;
+    background: url(images/maingr.jpg) no-repeat;
+}
+
+#fuss { width: 993px;
+          height: 160px;
+          background: url(images/fuss.jpg) no-repeat;
+          
+          margin: 0 auto;
+    }
+
+ul#menu{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	width:993px;
+	position:relative;
+	display:block;
+	height:40px;
+	text-transform:uppercase;
+	font-size:13px;
+	background:url('images/blue.jpg') no-repeat top left;
+	font-family:Helvetica,Arial,Verdana,sans-serif;
+}
+ul#menu li{
+	display:block;
+	float:left;
+      
+	margin:0px;
+	pading:0;
+	border-right:px solid #ffffff;
+	}
+ul#menu li a{ 
+	display:block;
+	float:left;
+	color:#ffffff;
+	text-decoration:none;
+	outline: none; 
+	padding:12px 20px 0px 20px;
+	height:40px;
+
+	}
+ul#menu li a:hover{
+
+	background:url('images/black.jpg') repeat-x top left;
+        color: rgb(73, 85, 161)	
+	}
+	
+
+
+
+
+	
+	
+	
+ul#menu2{
+	margin:0; 
+	padding:0; 
+	width:130px; 
+	list-style:none;
+	background:background:url('images/buttonrund.gif');
+	}
+ul#menu2 li{
+      padding:0; 
+      margin:15px 0 15px 0; 
+      height:40px; 
+      display:block;
+      
+      }
+ul#menu2 li a{
+	text-align:center;
+ 	height:40px; 
+  	padding:13px 10px; 
+	font:16px Verdana, Arial, Helvetica, sans-serif; 
+	color:#ffffff; 
+	display:block; 
+	background:url('images/buttonrund.gif') 0px 0px no-repeat; 
+	text-decoration:none;
+	outline: none; 
+	}
+ul#menu2 li a:hover{
+	background:url('images/buttonrund_on.gif') no-repeat
+	}
