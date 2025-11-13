@@ -1,240 +1,1098 @@
 <!DOCTYPE html>
 <html lang="de">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
-		
-		<title>Hippie Combo Leipzig</title>
-		<!-- Loading third party fonts -->
-		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet" type="text/css">
-		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
-		<!-- Loading main css file -->
-		<link rel="stylesheet" href="style.css">
-		
-		<!--[if lt IE 9]>
-		<script src="js/ie-support/html5.js"></script>
-		<script src="js/ie-support/respond.js"></script>
-		<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hippie Combo - Leise geht anders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-	</head>
+        :root {
+            --primary: #4955a1;
+            --primary-light: #6a75c5;
+            --primary-dark: #374085;
+            --secondary: #f9a826;
+            --accent: #4fc3a1;
+            --dark: #2d3748;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+        }
 
-	<body class="header-collapse">
-		
-		<div id="site-content">
-			<header class="site-header">
-				<div class="container">
-					<a href="index.html" id="branding">
-						<img src="dummy/logo.png" alt="Hippie Combo Logo">
-						<small class="site-description">Ein Hippie-Kamm für alle!</small>
-					</a> <!-- #branding -->
-					
-					<nav class="main-navigation">
-						<button type="button" class="toggle-menu"><i class="fa fa-bars"></i></button>
-						<ul class="menu">
-							<li class="menu-item current-menu-item"><a href="index.html">Home</a></li>
-							<li class="menu-item"><a href="about.html">About</a></li>
-							<li class="menu-item"><a href="gallery.html">Gallery</a></li>
-							<li class="menu-item"><a href="download.html">Download</a></li>
-							<li class="menu-item"><a href="blog.html">Blog</a></li>
-							<li class="menu-item"><a href="contact.html">Contact</a></li>
-						</ul> <!-- .menu -->
-					</nav> <!-- .main-navigation -->
-					<div class="mobile-menu"></div>
-				</div>
-			</header> <!-- .site-header -->
-			
-			<div class="hero">
-				<div class="slider">
-					<ul class="slides">
-<!--						<li class="lazy-bg" data-background="dummy/slide-1.jpg">
-							<div class="container">
-								<h1 class="slide-title">Wir sind die Hippie Combo</h1>
-								<h2 class="slide-subtitle">Ostrock aus Leipzig</h2>
-								<p class="slide-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Fugiat aliquid minus nemo sed est.</p>
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
 
-									<a href="#" class="button cut-corner">Read More</a>						
-								</div>
-						</li> //-->
-						<li class="lazy-bg" data-background="dummy/slide-2.jpg">
-							<div class="container">
-								<h1 class="slide-title">Wir sind die Hippie Combo</h1>
-								<h2 class="slide-subtitle">Ostrock aus Leipzig</h2>
-<!--								<p class="slide-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Fugiat aliquid minus nemo sed est.</p>
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-									<a href="#" class="button cut-corner">Read More</a> //-->						
-							</div>
-						</li>
-						<li class="lazy-bg" data-background="dummy/slide-3.jpg">
-							<div class="container">
-								<h1 class="slide-title">Wir sind die Hippie Combo</h1>
-								<h2 class="slide-subtitle">Ostrock aus Leipzig</h2>
-<!--								<p class="slide-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Fugiat aliquid minus nemo sed est.</p>
+        /* Header & Navigation */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
 
-									<a href="#" class="button cut-corner">Read More</a> //-->						
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-			
-			<main class="main-content">
-				<div class="fullwidth-block testimonial-section">
-					<div class="container">
-						<div class="quote-slider">
-							<ul class="slides">
-								<li>
-									<blockquote>
-										<p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo"</p>
-										<cite>John Smith</cite>
-										<span>Corporation CEO, books author</span>
-									</blockquote>
-								</li>
-								<li>
-									<blockquote>
-										<p>"Iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo"</p>
-										<cite>John Smith</cite>
-										<span>Corporation CEO, books author</span>
-									</blockquote>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div> <!-- .testimonial-section -->
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
 
-				<div class="fullwidth-block upcoming-event-section" data-bg-color="#191919">
-					<div class="container">
-						<header class="section-header">
-							<h2 class="section-title">Upcoming events</h2>
+        .logo {
+            height: 60px;
+            display: flex;
+            align-items: center;
+        }
 
-							<div class="event-nav">
-								<a class="prev" id="event-prev" href="#"><i class="fa fa-caret-left"></i></a>
-	    						<a class="next" id="event-next" href="#"><i class="fa fa-caret-right"></i></a>
-							</div> <!-- .event-nav -->
+        .logo img {
+            height: 100%;
+            width: auto;
+            max-width: 200px;
+            object-fit: contain;
+        }
 
-						</header> <!-- .section-header -->
-						<div class="event-carousel">
-							
-							<div class="event">
-								<div class="entry-date">
-									<div class="date">23</div>
-									<span class="month">Jun</span>
-								</div>
-								<h2 class="entry-title"><a href="#">Sed et persipiatis unde omnis iste natus</a></h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid temporibus quos aspernatur</p>
-							</div> <!-- .event -->
-							
-							
-							<div class="event">
-								<div class="entry-date">
-									<div class="date">23</div>
-									<span class="month">Jun</span>
-								</div>
-								<h2 class="entry-title"><a href="#">Sed et persipiatis unde omnis iste natus</a></h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid temporibus quos aspernatur</p>
-							</div> <!-- .event -->
-							
-							
-							<div class="event">
-								<div class="entry-date">
-									<div class="date">23</div>
-									<span class="month">Jun</span>
-								</div>
-								<h2 class="entry-title"><a href="#">Sed et persipiatis unde omnis iste natus</a></h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid temporibus quos aspernatur</p>
-							</div> <!-- .event -->
-							
-							
-							<div class="event">
-								<div class="entry-date">
-									<div class="date">23</div>
-									<span class="month">Jun</span>
-								</div>
-								<h2 class="entry-title"><a href="#">Sed et persipiatis unde omnis iste natus</a></h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid temporibus quos aspernatur </p>
-							</div> <!-- .event -->
-							
-							
-							<div class="event">
-								<div class="entry-date">
-									<div class="date">23</div>
-									<span class="month">Jun</span>
-								</div>
-								<h2 class="entry-title"><a href="#">Sed et persipiatis unde omnis iste natus</a></h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid temporibus quos aspernatur </p>
-							</div> <!-- .event -->
-							
-						</div> <!-- .event-carousel -->
-					</div> <!-- .container -->
-				</div> <!-- .upcoming-event-section -->
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
 
-				<div class="fullwidth-block why-chooseus-section">
-					<div class="container">
-						<h2 class="section-title">Why choose us?</h2>
+        .nav-links li {
+            margin-left: 30px;
+        }
 
-						<div class="row">
-							<div class="col-md-4">
-								<div class="feature">
-									<figure class="cut-corner">
-										<img src="dummy/medium-image-1.jpg" alt="">
-									</figure>
-									<h3 class="feature-title">Similique sunt in culpa qui officia deserunt mollitia animi laborum dolorum</h3>
-									<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
-								</div> <!-- .feature -->
-							</div>
-							<div class="col-md-4">
-								<div class="feature">
-									<figure class="cut-corner">
-										<img src="dummy/medium-image-2.jpg" alt="">
-									</figure>
-									<h3 class="feature-title">Similique sunt in culpa qui officia deserunt mollitia animi laborum dolorum</h3>
-									<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
-								</div> <!-- .feature -->
-							</div>
-							<div class="col-md-4">
-								<div class="feature">
-									<figure class="cut-corner">
-										<img src="dummy/medium-image-3.jpg" alt="">
-									</figure>
-									<h3 class="feature-title">Similique sunt in culpa qui officia deserunt mollitia animi laborum dolorum</h3>
-									<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
-								</div> <!-- .feature -->
-							</div>
-						</div>
-					</div> <!-- .container -->
-				</div> <!-- .why-chooseus-section -->
-			</main> <!-- .main-content -->
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
 
-			<footer class="site-footer">
-				<div class="container">
-					<img src="dummy/logo-footer.png" alt="Site Name">
-					
-					<address>
-						<p>495 Brainard St. Detroit, MI 48201 <br><a href="tel:354543543">(563) 429 234 890</a> <br> <a href="mailto:info@bandname.com">info@bandname.com</a></p> 
-					</address> 
-					
-					<form action="#" class="newsletter-form">
-						<input type="email" placeholder="Enter your email to join newsletter...">
-						<input type="submit" class="button cut-corner" value="Subscribe">
-					</form> <!-- .newsletter-form -->
-					
-					<div class="social-links">
-						<a href="#"><i class="fa fa-facebook-square"></i></a>
-						<a href="#"><i class="fa fa-twitter"></i></a>
-						<a href="#"><i class="fa fa-google-plus"></i></a>
-						<a href="#"><i class="fa fa-pinterest"></i></a>
-					</div> <!-- .social-links -->
-					
-					<p class="copy">Copyright 2014 Company Name. Designed by Themezy. All right reserved</p>
-				</div>
-			</footer> <!-- .site-footer -->
+        .nav-links a:hover {
+            color: var(--primary);
+        }
 
-		</div> <!-- #site-content -->
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
 
-		<script src="js/jquery-1.11.1.min.js"></script>		
-		<script src="js/plugins.js"></script>
-		<script src="js/app.js"></script>
-		
-	</body>
+        /* Hero Section */
+        .hero {
+            padding: 150px 0 100px;
+            background: linear-gradient(rgba(73, 85, 161, 0.8), rgba(73, 85, 161, 0.9)), url('assets/hc_banner.png?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+        }
 
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-weight: 300;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #e8971f;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+            margin-left: 15px;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary);
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary);
+        }
+
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-img {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--gray);
+        }
+
+        /* Video Section */
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-description {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Band Members Section */
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .member-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .member-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .member-img {
+            height: 300px;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray);
+        }
+
+        .member-img i {
+            font-size: 5rem;
+            color: #ddd;
+        }
+
+        .member-info {
+            padding: 20px;
+        }
+
+        .member-info h3 {
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+
+        .member-info p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Music Section */
+        .music-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .track {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .track:hover {
+            transform: translateY(-5px);
+        }
+
+        .track-number {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-right: 20px;
+            min-width: 30px;
+        }
+
+        .track-info {
+            flex: 1;
+        }
+
+        .track-info h3 {
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+
+        .track-info p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .track-controls {
+            display: flex;
+            align-items: center;
+        }
+
+        .play-btn {
+            background-color: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .play-btn:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .track-progress {
+            width: 150px;
+            height: 5px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin: 0 15px;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            background-color: var(--primary);
+            width: 0%;
+        }
+
+        .track-duration {
+            color: var(--gray);
+            font-size: 0.9rem;
+            min-width: 50px;
+        }
+
+        /* Gigs Section */
+        .gigs-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .gig-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .gig-info h3 {
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+
+        .gig-info p {
+            color: var(--gray);
+            margin-bottom: 5px;
+        }
+
+        .gig-date {
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-align: center;
+            min-width: 120px;
+        }
+
+        .gig-date .day {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .gig-date .month {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            display: flex;
+            gap: 50px;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .contact-icon {
+            background-color: var(--primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .contact-details h3 {
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+
+        .contact-form {
+            flex: 1;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .footer-about {
+            flex: 2;
+            margin-right: 50px;
+        }
+
+        .footer-links {
+            flex: 1;
+        }
+
+        .footer-links h3, .footer-social h3 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #b0b7c3;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-social {
+            flex: 1;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #b0b7c3;
+            font-size: 0.9rem;
+        }
+
+        /* Legal Pages */
+        .legal-content {
+            background-color: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-top: 30px;
+        }
+
+        .legal-content h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .legal-content h3 {
+            color: var(--primary);
+            margin: 30px 0 15px;
+        }
+
+        .legal-content p {
+            margin-bottom: 15px;
+            color: var(--gray);
+        }
+
+        .legal-content ul {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+
+        .legal-content li {
+            margin-bottom: 8px;
+            color: var(--gray);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content, .contact-content {
+                flex-direction: column;
+            }
+            
+            .about-img, .about-text {
+                flex: none;
+                width: 100%;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+            
+            .footer-about, .footer-links, .footer-social {
+                margin-bottom: 30px;
+                margin-right: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 10px 0;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .gig-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .gig-date {
+                margin-top: 15px;
+            }
+            
+            .track {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .track-number {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            
+            .track-info {
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <!-- Hier können Sie Ihr Logo einfügen -->
+                    <!-- Ersetzen Sie den src-Pfad mit dem Pfad zu Ihrem Logo -->
+                    <img src="assets/hc_logo.png" alt="Hippie Combo Logo">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Start</a></li>
+                    <li><a href="#about">Über uns</a></li>
+                    <li><a href="#video">Video</a></li>
+                    <li><a href="#members">Band</a></li>
+                    <li><a href="#music">Musik</a></li>
+                    <li><a href="#gigs">Auftritte</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Hippie Combo</h1>
+            <p>Leise geht anders.</p>
+            <a href="#music" class="btn">Musik hören</a>
+            <a href="#gigs" class="btn btn-outline">Nächste Auftritte</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Über uns</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-img">
+                    <!-- Hier würde Ihr Bild eingefügt -->
+                    <div style="height: 400px; background-color: #f0f0f0; display: flex; align-items: center; justify-content: center; color: var(--gray);">
+                        <i class="fas fa-music" style="font-size: 5rem;"></i>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Unsere Geschichte</h3>
+                    <p>Als die Hippie-Combo vor sage und schreibe vierzig Jahren gegründet wurde, waren wir auch mal jung. Und wir alle hatten lange Haare.</p>
+                    <p>Und weil wir so große Haare hatten, blieben die personalisierten Geschenke nicht aus, unter anderem ein überdimensionierter, ca. 50 cm großer Kamm mit der Aufschrift "HIPPIE COMB" (deutsch: Hippie-Kamm) - der Bandname "Hippie Combo" lag nahe.</p>
+                    <p>In vierzig Jahren kommen und gehen Haare und Dinge; der Windzug sich schließender Türen öffnet neue. Zwei der ehemaligen Gründungsmitglieder, Conny und Friedhelm, sind jetzt noch dabei.</p>
+                    <p>Geblieben ist die Lust, deutschsprachige Lieder mit Gedanken und Geschichten zu füllen, gern auch mal sehr rockig und laut. Und die Suche in klassischer Besetzung Schlagzeug, Bass und zwei Gitarren hört nicht auf.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Video</h2>
+            </div>
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <!-- Ersetzen Sie die Video-ID mit Ihrer eigenen YouTube-Video-ID -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/b5VMLpVpfR0?si=5wELg20RUTmBfwBg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-description">
+                    <p>Sehen Sie sich unseren neuesten Live-Auftritt an. Rockige, deutschsprachige Musik wie Sie sie lieben - laut, energiegeladen und mit viel Herz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Band Members Section -->
+    <section id="members">
+        <div class="container">
+            <div class="section-title">
+                <h2>Die Band</h2>
+            </div>
+            <div class="members-grid">
+                <!-- Member 1 -->
+                <div class="member-card">
+                    <div class="member-img">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Andreas Conrad</h3>
+                        <p>Gitarre, Gesang</p>
+                    </div>
+                </div>
+                
+                <!-- Member 2 -->
+                <div class="member-card">
+                    <div class="member-img">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Friedhelm Burkert</h3>
+                        <p>Bass</p>
+                    </div>
+                </div>
+                
+                <!-- Member 3 -->
+                <div class="member-card">
+                    <div class="member-img">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Andreas Pfau</h3>
+                        <p>Schlagzeug, Gesang</p>
+                    </div>
+                </div>
+                
+                <!-- Member 4 -->
+                <div class="member-card">
+                    <div class="member-img">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Marco Steinhäuser</h3>
+                        <p>Gitarre, Gesang</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section id="music" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Musik</h2>
+            </div>
+            <div class="music-grid">
+                <!-- Track 1 -->
+                <div class="track">
+                    <div class="track-number">01</div>
+                    <div class="track-info">
+                        <h3>Leise geht anders</h3>
+                        <p>Hippie Combo • 2023</p>
+                    </div>
+                    <div class="track-controls">
+                        <div class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="track-progress">
+                            <div class="progress" style="width: 0%"></div>
+                        </div>
+                        <div class="track-duration">3:45</div>
+                    </div>
+                </div>
+                
+                <!-- Track 2 -->
+                <div class="track">
+                    <div class="track-number">02</div>
+                    <div class="track-info">
+                        <h3>Vierzig Jahre</h3>
+                        <p>Hippie Combo • 2022</p>
+                    </div>
+                    <div class="track-controls">
+                        <div class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="track-progress">
+                            <div class="progress" style="width: 0%"></div>
+                        </div>
+                        <div class="track-duration">4:12</div>
+                    </div>
+                </div>
+                
+                <!-- Track 3 -->
+                <div class="track">
+                    <div class="track-number">03</div>
+                    <div class="track-info">
+                        <h3>Rockiger Tag</h3>
+                        <p>Hippie Combo • 2021</p>
+                    </div>
+                    <div class="track-controls">
+                        <div class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="track-progress">
+                            <div class="progress" style="width: 0%"></div>
+                        </div>
+                        <div class="track-duration">3:28</div>
+                    </div>
+                </div>
+                
+                <!-- Track 4 -->
+                <div class="track">
+                    <div class="track-number">04</div>
+                    <div class="track-info">
+                        <h3>Hippie-Träume</h3>
+                        <p>Hippie Combo • 2020</p>
+                    </div>
+                    <div class="track-controls">
+                        <div class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="track-progress">
+                            <div class="progress" style="width: 0%"></div>
+                        </div>
+                        <div class="track-duration">4:05</div>
+                    </div>
+                </div>
+                
+                <!-- Track 5 -->
+                <div class="track">
+                    <div class="track-number">05</div>
+                    <div class="track-info">
+                        <h3>Laut und deutlich</h3>
+                        <p>Hippie Combo • 2019</p>
+                    </div>
+                    <div class="track-controls">
+                        <div class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="track-progress">
+                            <div class="progress" style="width: 0%"></div>
+                        </div>
+                        <div class="track-duration">3:52</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gigs Section -->
+    <section id="gigs" style="display: none;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nächste Auftritte</h2>
+            </div>
+            <div class="gigs-list">
+                <!-- Gig 1 -->
+                <div class="gig-item">
+                    <div class="gig-info">
+                        <h3>Stadthalle Musterstadt</h3>
+                        <p>Musterstraße 123, 12345 Musterstadt</p>
+                        <p>Einlass: 19:00 Uhr | Beginn: 20:00 Uhr</p>
+                        <a href="#">Mehr Informationen</a>
+                    </div>
+                    <div class="gig-date">
+                        <span class="day">15</span>
+                        <span class="month">Juni</span>
+                    </div>
+                </div>
+                
+                <!-- Gig 2 -->
+                <div class="gig-item">
+                    <div class="gig-info">
+                        <h3>Rock am See Festival</h3>
+                        <p>Seepromenade 45, 54321 Seestadt</p>
+                        <p>Einlass: 16:00 Uhr | Beginn: 18:30 Uhr</p>
+                        <a href="#">Mehr Informationen</a>
+                    </div>
+                    <div class="gig-date">
+                        <span class="day">22</span>
+                        <span class="month">Juli</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Kontakt & Booking</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>booking@hippiecombo.de</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Telefon</h3>
+                            <p>+49 (0) 123 456 789</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Büro</h3>
+                            <p>Musterstraße 123, 12345 Musterstadt</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Ihr Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Ihre E-Mail" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Betreff">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Ihre Nachricht" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Nachricht senden</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="logo" style="color: white; margin-bottom: 20px; display: flex; align-items: center;">
+                        <!-- Logo im Footer -->
+                        <img src="assets/hc_logo.png" alt="Hippie Combo Logo" style="height: 40px; margin-right: 15px;">
+                        <span>Leise geht anders.</span>
+                    </div>
+                    <p>Seit 40 Jahren rockige, deutschsprachige Musik mit Gedanken und Geschichten.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Rechtliches</h3>
+                    <ul>
+                        <li><a href="#" id="privacy-link">Datenschutz</a></li>
+                        <li><a href="#" id="imprint-link">Impressum</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Folgen Sie uns</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-spotify"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Hippie Combo. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu after clicking a link
+                    document.querySelector('.nav-links').classList.remove('active');
+                }
+            });
+        });
+
+        // Simple form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Vielen Dank für Ihre Nachricht! Wir werden uns schnellstmöglich bei Ihnen melden.');
+            this.reset();
+        });
+
+        // Simple audio player functionality
+        document.querySelectorAll('.play-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const icon = this.querySelector('i');
+                if(icon.classList.contains('fa-play')) {
+                    icon.classList.remove('fa-play');
+                    icon.classList.add('fa-pause');
+                    // Here you would start playing the audio
+                } else {
+                    icon.classList.remove('fa-pause');
+                    icon.classList.add('fa-play');
+                    // Here you would pause the audio
+                }
+            });
+        });
+
+        // Show gigs section if there are upcoming gigs
+        // For demonstration, we're showing it. Remove the next line to hide it.
+        // document.getElementById('gigs').style.display = 'block';
+    </script>
+</body>
 </html>
